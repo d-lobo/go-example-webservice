@@ -13,7 +13,7 @@ thus ignoring typical patterns like reading secrets from env-properties or exter
 
 requires a local mongo db instance (you may use provided script `.development/mongo.sh`)
 
-* go install & execute binary or go run .
+* `go install` & execute binary or `go run .`
 
 ## Example requests
 
@@ -22,6 +22,6 @@ requires `curl` & `jq`
 * getting all albums
   * `curl localhost:8080/albums | jq .`
 * inserting an album
-  * `curl -H 'Content-Type: application/json' localhost:8080 \-d '{"title":"exampleTitle", "artist":"exampleArtist", "price":9.99}'`
+  * `curl -H 'Content-Type: application/json' localhost:8080 -d '{"title":"exampleTitle", "artist":"exampleArtist", "price":9.99}'`
 * getting a specific album
   * `curl localhost:8080/albums/<id> | jq .`
